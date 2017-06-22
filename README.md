@@ -6,16 +6,15 @@ Only system requirements is installed Docker and a steam key from http://steamco
 
 ## Usage:
 
-  docker build -t screeps-image --build-arg steamkey=YOURSTEAMKEYHERE .
-  docker run -dP --name screeps-server screeps-image
+    docker build -t screeps-image --build-arg steamkey=YOURSTEAMKEYHERE .
+    docker run -dP --name screeps-server screeps-image
 
 
-  # to kill
-  docker kill screeps-server
+### Stop the server
+    docker kill screeps-server
 
-  # to find which port to connect to
-  docker ports screeps-server
+### Find which port to connect to
+    docker port screeps-server
 
-  # to use CLI
-  docker exec -it screeps-server screeps cli
-
+### Use the CLI
+    docker exec -it screeps-server screeps cli
