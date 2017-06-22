@@ -2,8 +2,8 @@ FROM node:6.11
 
 RUN npm install -g screeps
 
-# no steamkey is fine if we don't care about auth
 ARG steamkey
+# steamkey is necessary or screeps refuses to bind to 0.0.0.0
 RUN test -n "$steamkey" && echo "$steamkey" | screeps init
 
 # server
